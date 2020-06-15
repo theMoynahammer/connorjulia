@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <!-- <h1>{{ msg }}</h1> -->
+    <h5>Welcome! This site is being made by Connor & Julia in their free time. So stay tuned!</h5>
     <!-- <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the

@@ -1,10 +1,16 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Wedding Info</router-link> |
-      <router-link to="/about">About Us</router-link>
+    <!-- <div id="mainModal"> -->
+     <div id="nav">
+       <router-link to="/">Wedding Info</router-link> |
+       <router-link to="/about">About Us</router-link> |
+       <router-link to="/connor">Connor</router-link> |
+       <router-link to="/julia">Julia</router-link>
+      <!-- </div> -->
+      <div id='wrapper'>
+      <router-view/>
+      </div>
     </div>
-    <router-view/>
   </div>
 </template>
 
@@ -15,6 +21,16 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: white;
+  width: 350px;
+  height: 400px;
+}
+
+#wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:325px;
 }
 
 #nav {
@@ -23,10 +39,11 @@
 
 #nav a {
   font-weight: bold;
+  font-size: 15px;
   color: #2c3e50;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: rgb(20, 130, 220);
 }
 </style>
