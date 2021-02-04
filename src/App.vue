@@ -1,201 +1,176 @@
 <template>
-  <div id="app">
-    <!-- Navbar (sticky bottom) -->
-    <div class="w3-bottom w3-hide-small">
-      <div
-        class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off"
+  <v-app>
+    <v-navigation-drawer
+      v-model="showDrawer"
+      absolute
+      temporary
+      id="main-nav-bar"
+    >
+      <v-list-item>
+        <v-list-item-avatar>
+          <v-img src="/assets/headshot.jpg"></v-img>
+        </v-list-item-avatar>
+
+        <v-list-item-content>
+          <v-list-item-title>Connor Moynahan</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider class="ma-0"></v-divider>
+
+      <v-list dense>
+        <v-list-item link to="/resume">
+          <v-list-item-icon>
+            <v-icon>fa-file</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>Resume</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link to="/aboutme">
+          <v-list-item-icon>
+            <v-icon>fa-user</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>About Me</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link to="/contact">
+          <v-list-item-icon>
+            <v-icon style="width: 24px">fa-id-card-o</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>Contact Info</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+    <v-app-bar app color="#f0cee1">
+      <v-toolbar-title>C & J Wedding - 5.15.21</v-toolbar-title>
+      <!-- <v-app-bar-nav-icon
+        @click="showDrawer = !showDrawer"
+      ></v-app-bar-nav-icon> -->
+      <div class="d-flex align-center">
+        <router-link to="/resume">
+          <v-img
+            alt="logo"
+            class="shrink mt-1 logo-class"
+            contain
+            src="/assets/logo.svg"
+            style="cursor: pointer"
+            width="50"
+          />
+        </router-link>
+      </div>
+
+      <v-spacer></v-spacer>
+
+      <!-- <v-btn  text>
+                <a id ="download-resume-link" href="/Connor Moynahan - Resume.pdf" download>
+                <v-icon>mdi-download</v-icon>
+                </a>
+      </v-btn>-->
+      <v-btn @click="dialogOpen = true" text>
+        <!-- <span class="mr-2">Latest Release</span> -->
+        <v-icon>mdi-information-outline</v-icon>
+      </v-btn>
+      <v-btn
+        href="https://www.linkedin.com/in/connor-moynahan-0a568698/"
+        target="_blank"
+        rel="noopener noreferrer"
+        text
       >
-        <a href="#home" style="width: 25%" class="w3-bar-item w3-button"
-          >Home</a
-        >
-        <a href="#us" style="width: 25%" class="w3-bar-item w3-button"
-          >Jane & John</a
-        >
-        <a href="#wedding" style="width: 25%" class="w3-bar-item w3-button"
-          >Wedding</a
-        >
-        <a
-          href="#rsvp"
-          style="width: 25%"
-          class="w3-bar-item w3-button w3-hover-black"
-          >RSVP</a
-        >
-      </div>
-    </div>
+        <!-- <span class="mr-2">Latest Release</span> -->
+        <v-icon>fa-linkedin-square</v-icon>
+      </v-btn>
+      <v-btn link to="/contact" text>
+        <!-- <span class="mr-2">Latest Release</span> -->
+        <v-icon>fa-id-card-o</v-icon>
+      </v-btn>
+      <!--<router-link class="router-options" to="/">About</router-link> |
+      <router-link class="router-options" to="/searchbgg">Search BGG</router-link>-->
+    </v-app-bar>
 
-    <!-- About / Jane And John -->
-    <div
-      class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min"
-      id="us"
-    >
-      <div class="w3-content">
-        <h1 class="w3-center w3-text-grey"><b>Jane & John</b></h1>
-        <img
-          class="w3-round w3-grayscale-min"
-          src="https://www.w3schools.com/w3images/wedding_couple2.jpg"
-          style="width: 100%; margin: 32px 0"
-        />
-        <p>
-          <i
-            >You all know us. And we all know you. We are getting married lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</i
-          >
-        </p>
-        <br />
-        <p class="w3-center">
-          <a
-            href="#wedding"
-            class="w3-button w3-black w3-round w3-padding-large w3-large"
-            >Wedding Details</a
-          >
-        </p>
-      </div>
-    </div>
-
-    <!-- Background photo -->
-    <div class="w3-display-container bgimg2">
-      <div class="w3-display-middle w3-text-white w3-center">
-        <h1 class="w3-jumbo">You Are Invited</h1>
-        <br />
-        <h2>Of course..</h2>
-      </div>
-    </div>
-
-    <!-- Wedding information -->
-    <div
-      class="w3-container w3-padding-64 w3-pale-red w3-grayscale-min w3-center"
-      id="wedding"
-    >
-      <div class="w3-content">
-        <h1 class="w3-text-grey"><b>THE WEDDING</b></h1>
-        <img
-          class="w3-round-large w3-grayscale-min"
-          src="https://www.w3schools.com/w3images/wedding_location.jpg"
-          style="width: 100%; margin: 64px 0"
-        />
-        <div class="w3-row">
-          <div class="w3-half">
-            <h2>When</h2>
-            <p>Wedding Ceremony - 2:00pm</p>
-            <p>Reception & Dinner - 5:00pm</p>
-          </div>
-          <div class="w3-half">
-            <h2>Where</h2>
-            <p>Some place, an address</p>
-            <p>Some where, some address</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- RSVP section -->
-    <div
-      class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide"
-      id="rsvp"
-    >
-      <h1>HOPE YOU CAN MAKE IT!</h1>
-      <p class="w3-large">Kindly Respond By January, 2017</p>
-      <p class="w3-xlarge">
-        <button
-          onclick="document.getElementById('id01').style.display='block'"
-          class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off"
-          style="padding: 8px 60px"
+    <v-dialog v-model="dialogOpen" width="500">
+      <v-card>
+        <v-card-title class="headline lighten-2 dialog-class" primary-title
+          >About this site</v-card-title
         >
-          RSVP
-        </button>
-      </p>
-    </div>
 
-    <!-- RSVP modal -->
-    <div id="id01" class="w3-modal">
-      <div
-        class="w3-modal-content w3-card-4 w3-animate-zoom"
-        style="padding: 32px; max-width: 600px"
-      >
-        <div class="w3-container w3-white w3-center">
-          <h1 class="w3-wide">CAN YOU COME?</h1>
-          <p>We really hope you can make it.</p>
-          <form>
-            <input
-              class="w3-input w3-border"
-              type="text"
-              placeholder="Name(s)"
-              name="name"
-            />
-          </form>
-          <p><i>Sincerely, John & Jane</i></p>
-          <div class="w3-row">
-            <div class="w3-half">
-              <button
-                onclick="document.getElementById('id01').style.display='none'"
-                type="button"
-                class="w3-button w3-block w3-green"
-              >
-                Going
-              </button>
-            </div>
-            <div class="w3-half">
-              <button
-                onclick="document.getElementById('id01').style.display='none'"
-                type="button"
-                class="w3-button w3-block w3-red"
-              >
-                Can't come
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        <v-card-text>{{ aboutThisSite }}</v-card-text>
 
-    <!-- Footer -->
-    <footer class="w3-center w3-black w3-padding-16">
-      <p>
-        Powered by
-        <a
-          href="https://www.w3schools.com/w3css/default.asp"
-          title="W3.CSS"
-          target="_blank"
-          class="w3-hover-text-green"
-          >w3.css</a
-        >
-      </p>
-    </footer>
-    <div class="w3-hide-small" style="margin-bottom: 32px" />
-  </div>
+        <!-- <v-divider></v-divider> -->
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="primary" text @click="dialogOpen = false">Neat!</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
+    <v-content>
+      <router-view />
+      <!-- <HelloWorld/> -->
+    </v-content>
+  </v-app>
 </template>
 
-<style>
+<script>
+// import HelloWorld from './components/HelloWorld';
+import siteText from './text/site-text';
+
+export default {
+  name: 'App',
+
+  components: {
+    // HelloWorld,
+  },
+
+  data: () => ({
+    showDrawer: false,
+    dialogOpen: false,
+    aboutThisSite: siteText.aboutThisSite,
+    //     items: [
+    //   { title: 'Home', icon: 'dashboard' },
+    //   { title: 'About', icon: 'question_answer' },
+    // ],
+  }),
+};
+</script>
+
+<style scoped>
+html,
 body,
 h1,
-h2 {
-  font-family: "Raleway", sans-serif;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
 }
-body,
-html {
-  height: 100%;
+
+.router-options {
+  color: white;
+  margin: 10px;
 }
-p {
-  line-height: 2;
+
+.headshot-navbar {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
 }
-.bgimg,
-.bgimg2 {
-  min-height: 100%;
-  background-position: center;
-  background-size: cover;
+
+.dialog-class {
+  background-color: #4682b4;
+  color: white;
+  margin-bottom: 5px;
 }
-.bgimg {
-  background-image: url("https://www.w3schools.com/w3images/wedding_couple.jpg");
-}
-.bgimg2 {
-  background-image: url("https://www.w3schools.com/w3images/flowers.jpg");
+
+#main-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
 }
 </style>
