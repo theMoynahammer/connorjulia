@@ -1,56 +1,10 @@
 <template>
   <v-app>
-    <v-navigation-drawer
-      v-model="showDrawer"
-      absolute
-      temporary
-      id="main-nav-bar"
-    >
-      <v-list-item>
-        <v-list-item-avatar>
-          <v-img src="/assets/headshot.jpg"></v-img>
-        </v-list-item-avatar>
-
-        <v-list-item-content>
-          <v-list-item-title>Connor Moynahan</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-divider class="ma-0"></v-divider>
-
-      <v-list dense>
-        <v-list-item link to="/resume">
-          <v-list-item-icon>
-            <v-icon>fa-file</v-icon>
-          </v-list-item-icon>
-          <v-list-item-content>
-            <v-list-item-title>Resume</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item link to="/aboutme">
-          <v-list-item-icon>
-            <v-icon>fa-user</v-icon>
-          </v-list-item-icon>
-          <v-list-item-content>
-            <v-list-item-title>About Me</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item link to="/contact">
-          <v-list-item-icon>
-            <v-icon style="width: 24px">fa-id-card-o</v-icon>
-          </v-list-item-icon>
-          <v-list-item-content>
-            <v-list-item-title>Contact Info</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
     <v-app-bar app color="#f0cee1">
-      <v-toolbar-title>C & J Wedding - 5.15.21</v-toolbar-title>
-      <!-- <v-app-bar-nav-icon
-        @click="showDrawer = !showDrawer"
-      ></v-app-bar-nav-icon> -->
-      <div class="d-flex align-center">
+      <v-toolbar-title
+        >C & J Wedding - 5.15.21</v-toolbar-title
+      >
+      <!-- <div class="d-flex align-center">
         <router-link to="/resume">
           <v-img
             alt="logo"
@@ -65,13 +19,7 @@
 
       <v-spacer></v-spacer>
 
-      <!-- <v-btn  text>
-                <a id ="download-resume-link" href="/Connor Moynahan - Resume.pdf" download>
-                <v-icon>mdi-download</v-icon>
-                </a>
-      </v-btn>-->
       <v-btn @click="dialogOpen = true" text>
-        <!-- <span class="mr-2">Latest Release</span> -->
         <v-icon>mdi-information-outline</v-icon>
       </v-btn>
       <v-btn
@@ -80,18 +28,16 @@
         rel="noopener noreferrer"
         text
       >
-        <!-- <span class="mr-2">Latest Release</span> -->
         <v-icon>fa-linkedin-square</v-icon>
       </v-btn>
       <v-btn link to="/contact" text>
-        <!-- <span class="mr-2">Latest Release</span> -->
         <v-icon>fa-id-card-o</v-icon>
-      </v-btn>
+      </v-btn> -->
       <!--<router-link class="router-options" to="/">About</router-link> |
       <router-link class="router-options" to="/searchbgg">Search BGG</router-link>-->
     </v-app-bar>
 
-    <v-dialog v-model="dialogOpen" width="500">
+    <!-- <v-dialog v-model="dialogOpen" width="500">
       <v-card>
         <v-card-title class="headline lighten-2 dialog-class" primary-title
           >About this site</v-card-title
@@ -99,25 +45,60 @@
 
         <v-card-text>{{ aboutThisSite }}</v-card-text>
 
-        <!-- <v-divider></v-divider> -->
-
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="primary" text @click="dialogOpen = false">Neat!</v-btn>
         </v-card-actions>
       </v-card>
-    </v-dialog>
+    </v-dialog> -->
 
     <v-content>
       <router-view />
       <!-- <HelloWorld/> -->
     </v-content>
+    <v-footer
+    class="justify-center"
+    color="#808080"
+    padless
+    >
+      <!-- <v-card
+        flat
+        tile
+        width="100%"
+        class="red lighten-1 text-center"
+      >
+        <v-card-text class="white--text">
+          {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+        </v-card-text>
+      </v-card> -->
+      <h6 class="white--text">🚀🚀🚀🚀🚀: {{timeRemaining}}</h6>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld';
-import siteText from './text/site-text';
+// import siteText from './text/site-text';
+
+// const countDownDate = new Date('May 15, 2021 18:00:00').getTime();
+// const countdownFunction = () => {
+// const now = new Date().getTime();
+// const distance = countDownDate - now;
+// const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+// const hours = Math.floor(
+//   (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+// );
+// const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+// const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+// this.timeRemaining = `${days}d ${hours}h ${minutes}m ${seconds}s `;
+//   // If the count down is finished, write some text
+// if (distance < 0) {
+//   clearInterval(x);
+//   document.getElementById("demo").innerHTML = 'EXPIRED';
+// }
+// };
+// const x = setInterval(countdownFunction, 1000);
+// setInterval(countdownFunction, 1000);
 
 export default {
   name: 'App',
@@ -127,14 +108,37 @@ export default {
   },
 
   data: () => ({
-    showDrawer: false,
-    dialogOpen: false,
-    aboutThisSite: siteText.aboutThisSite,
+    timeRemaining: '',
+    dateOfCeremony: new Date('May 15, 2021 18:00:00').getTime(),
+    // showDrawer: false,
+    // dialogOpen: false,
+    // aboutThisSite: siteText.aboutThisSite,
     //     items: [
     //   { title: 'Home', icon: 'dashboard' },
     //   { title: 'About', icon: 'question_answer' },
     // ],
   }),
+  mounted() {
+    this.countdownMethod();
+  },
+  methods: {
+    countdownMethod() {
+      this.timeRemaining = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = this.dateOfCeremony - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        //   // Display the result in the element with id="demo"
+        // document.getElementById('countdown').innerHTML =
+        this.timeRemaining = `${days}d ${hours}h ${minutes}m ${seconds}s `;
+      }, 1000);
+    },
+  },
 };
 </script>
 

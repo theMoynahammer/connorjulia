@@ -6,7 +6,7 @@
         <v-img max-width="500" src="/assets/dopebeachpic.jpg"></v-img>
       </v-col>
     </v-row> -->
-    <v-row>
+    <v-row class="row-margin-above">
       <!-- <v-col sm="6"> -->
       <v-col>
         <!-- <section>
@@ -70,26 +70,29 @@
         <!-- <v-parallax height="400" src="/assets/dopebeachpic.jpg"></v-parallax> -->
       </v-col>
     </v-row>
+    <!-- <v-row>
+      <v-col><h2 class="text-center headline">Ceremony Details</h2></v-col>
+    </v-row> -->
     <v-row>
-      <v-col><h2 class="text-center">Ceremony Details</h2></v-col>
-    </v-row>
-    <v-row>
-      <v-col sm="6" lg="12">
+      <v-col cols="12" md="6">
         <!-- <v-divider></v-divider> -->
-        <v-card>
+        <v-card color="rgb(70, 130, 180)" class="white--text margin-below-special">
           <!-- <v-card-title class="justify-center">
             When
           </v-card-title> -->
           <!-- <v-card-subtitle>connor.moynahan@gmail.com</v-card-subtitle> -->
-          <v-card-title class="justify-center"> When? </v-card-title>
-          <v-card-subtitle class="text-center"
+          <v-card-title class="justify-center headline"
+            >When is it?
+          </v-card-title>
+          <!-- <v-card-subtitle class="text-center"
             ><b>May 15, 2021</b></v-card-subtitle
-          >
-          <v-card-text>
+          > -->
+          <v-card-text class="white padding-0-override">
+            <h6 class="h6-margin-top-0 text-center"><b>May 15, 2021</b></h6>
             <v-timeline align-top dense>
-              <v-timeline-item color="#4682B4" small>
+              <v-timeline-item color="#f0cee1" small>
                 <v-row class="pt-1">
-                  <v-col cols="3">
+                  <v-col sm="4" md="3">
                     <strong>5pm</strong>
                   </v-col>
                   <v-col>
@@ -100,9 +103,9 @@
                   </v-col>
                 </v-row>
               </v-timeline-item>
-              <v-timeline-item color="#4682B4" small>
+              <v-timeline-item color="#f0cee1" small>
                 <v-row class="pt-1">
-                  <v-col cols="3">
+                  <v-col sm="4" md="3">
                     <strong>5:30pm</strong>
                   </v-col>
                   <v-col>
@@ -111,9 +114,9 @@
                 </v-row>
               </v-timeline-item>
 
-              <v-timeline-item color="#4682B4" small>
+              <v-timeline-item color="#f0cee1" small>
                 <v-row class="pt-1">
-                  <v-col cols="3">
+                  <v-col sm="4" md="3">
                     <strong>~6pm</strong>
                   </v-col>
                   <v-col>
@@ -124,9 +127,9 @@
                   </v-col>
                 </v-row>
               </v-timeline-item>
-              <v-timeline-item color="#4682B4" small>
+              <v-timeline-item color="#f0cee1" small>
                 <v-row class="pt-1">
-                  <v-col cols="3">
+                  <v-col sm="4" md="3">
                     <strong>~10pm</strong>
                   </v-col>
                   <v-col>
@@ -140,31 +143,121 @@
             </v-timeline>
           </v-card-text>
         </v-card>
-      </v-col>
-      </v-row>
-    <v-row>
-      <v-col sm="6" lg="12">
-        <!-- <v-divider></v-divider> -->
-        <v-card>
+        <v-card color="rgb(70, 130, 180)" class="white--text">
           <!-- <v-card-title class="justify-center">
             When
           </v-card-title> -->
           <!-- <v-card-subtitle>connor.moynahan@gmail.com</v-card-subtitle> -->
-          <v-card-title class="justify-center"> Where? </v-card-title>
-          <v-card-subtitle class="text-center"
-            >(click address to open in Google maps)</v-card-subtitle
-          >
-          <v-card-text class="text-center"
-            ><h6><b>Virginia Powerboat Association</b></h6>
+          <v-card-title class="justify-center headline"> Where? </v-card-title>
+          <v-card-text class="white text-center"
+            ><h6 class="h6-margin-top-0">
+              <b>Virginia Powerboat Association</b>
+            </h6>
             <a
               href="https://www.google.com/maps?q=4051%20E%20Old%20Gun%20Rd%20Midlothian,%20VA%2023113"
               target="_blank"
               rel="noopener noreferrer"
-            ><h6>
-              4051 E Old Gun Rd<br />
-              Midlothian, VA 23113</h6></a
+              ><h6>
+                4051 E Old Gun Rd<br />
+                Midlothian, VA 23113
+              </h6></a
             >
-            <br /><br /><br /><br /><br /><br /><br /><br />
+          </v-card-text>
+        </v-card>
+      </v-col>
+
+      <!-- </v-row>
+    <v-row> -->
+      <v-col cols="12" md="6">
+        <!-- <v-divider></v-divider> -->
+        <v-card color="rgb(70, 130, 180)" class="white--text margin-below">
+          <!-- <v-card-title class="justify-center">
+            When
+          </v-card-title> -->
+          <!-- <v-card-subtitle>connor.moynahan@gmail.com</v-card-subtitle> -->
+          <v-card-title class="justify-center headline">
+            Accommodations
+          </v-card-title>
+          <!-- <v-card-subtitle class="text-center"
+            ></v-card-subtitle
+          > -->
+          <v-card-text class="white text-left">
+            <h6 class="h6-margin-top-0 text-center">
+              <b>Omni Richmond Hotel</b>
+            </h6>
+            We have reserved a block of rooms for out of towners to stay. In
+            order to book, you need to call and say you are booking for the
+            "Moynahan/Shreckhise" wedding by <b>April 16th</b>
+            <a href="tel:804-344-7000"><h6>(804) 344-7000</h6></a>
+            <a
+              href="https://www.google.com/maps/place/Omni+Richmond+Hotel/@37.535771,-77.435025,15z/data=!4m2!3m1!1s0x0:0xf62bf4e5b2834d1e?sa=X&ved=2ahUKEwiQkMuGldHuAhVuF1kFHYeVAHIQ_BIwD3oECB0QBQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><h6>
+                100 S 12th St<br />
+                Richmond, VA 23219
+              </h6></a
+            >
+            <a
+              href="https://www.google.com/maps/dir/4051+E+Old+Gun+Rd,+Midlothian,+VA+23113/Omni+Richmond+Hotel,+South+12th+Street,+Richmond,+VA/@37.5450632,-77.5902397,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x89b16cf52118b495:0xc6cb60a98721b012!2m2!1d-77.6051725!2d37.5550927!1m5!1m1!1s0x89b111183216207f:0xf62bf4e5b2834d1e!2m2!1d-77.435025!2d37.535771"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><h6>Directions to venue (approx 22 mins)</h6></a
+            >
+            <a
+              href="https://www.omnihotels.com/hotels/richmond"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><h6>Omni Richmond Website</h6></a
+            >
+          </v-card-text>
+        </v-card>
+        <v-card color="rgb(70, 130, 180)" class="white--text">
+          <!-- <v-card-title class="justify-center">
+            When
+          </v-card-title> -->
+          <!-- <v-card-subtitle>connor.moynahan@gmail.com</v-card-subtitle> -->
+          <v-card-title class="justify-center headline">
+            Miscellaneous
+          </v-card-title>
+          <!-- <v-card-subtitle class="text-center"
+            ></v-card-subtitle
+          > -->
+          <v-card-text class="white text-left">
+            You can find our Amazon Registry -->
+            <a
+              href="https://www.amazon.com/wedding/julia-shreckhise-connor-moynahan--may-2022/registry/LQJ9SISQU6W6"
+              target="_blank"
+              rel="noopener noreferrer"
+              >here</a
+            ><br /><br />
+            We will be keeping this website updated as we get closer to the
+            date!!!
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <v-card color="rgb(70, 130, 180)" class="white--text">
+          <!-- <v-card-title class="justify-center">
+            When
+          </v-card-title> -->
+          <!-- <v-card-subtitle>connor.moynahan@gmail.com</v-card-subtitle> -->
+          <v-card-title class="justify-center headline">
+            What about Covid-19?
+          </v-card-title>
+          <!-- <v-card-subtitle class="text-center"
+            ></v-card-subtitle
+          > -->
+          <v-card-text class="white text-left">
+            We would like to say that "we'll be fine" by May 15th (but we all
+            know how that goes), so we are planning this ceremony to be as
+            pandemic proof as possible. The ceremony as well as dinner will be
+            outside (under a tent). We're not requiring masks, but we will
+            certainly re-evaluate we we get closer to the date. We want our
+            guests to feel as comfortable as possible, cause we WANT TO SEE YOU
+            ALL!
           </v-card-text>
         </v-card>
       </v-col>
@@ -182,43 +275,14 @@
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue';
 
-// Set the date we're counting down to
-// const countDownDate = new Date("May 15, 2021 18:00:00").getTime();
-
-// // Update the count down every 1 second
-// const countdownFunction = () => {
-//   // Get today's date and time
-//   const now = new Date().getTime();
-
-//   // Find the distance between now and the count down date
-//   const distance = countDownDate - now;
-
-//   // Time calculations for days, hours, minutes and seconds
-//   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//   const hours = Math.floor(
-//     (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-//   );
-//   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-//   // Display the result in the element with id="demo"
-//   // document.getElementById("countdown").innerHTML = `${days}d ${hours}h
-//   // ${minutes}m ${seconds}s `;
-
-//   // If the count down is finished, write some text
-//   // if (distance < 0) {
-//   //   clearInterval(x);
-//   //   document.getElementById("demo").innerHTML = 'EXPIRED';
-//   // }
-// };
-// // const x = setInterval(countdownFunction, 1000);
-// setInterval(countdownFunction, 1000);
-
 export default {
   name: 'Home',
   components: {
     // HelloWorld,
   },
+  // data: () => ({
+  //   countdown: '',
+  // }),
 };
 </script>
 
@@ -265,5 +329,24 @@ h6 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.margin-below {
+  margin-bottom: 24px;
+}
+.margin-below-special {
+  margin-bottom: 26px;
+}
+
+.padding-0-override {
+  /* padding-left: 0px;
+  padding-right: 0px; */
+}
+.h6-margin-top-0 {
+  margin-top: 0px;
+}
+
+.row-margin-above{
+  margin-top:12px;
 }
 </style>
