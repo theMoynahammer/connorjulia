@@ -76,7 +76,7 @@
     <v-row>
       <v-col cols="12" md="6">
         <!-- <v-divider></v-divider> -->
-        <v-card color="rgb(70, 130, 180)" class="white--text margin-below-special">
+        <v-card elevation="10" color="#ADD8E6" class="white--text margin-below">
           <!-- <v-card-title class="justify-center">
             When
           </v-card-title> -->
@@ -87,8 +87,8 @@
           <!-- <v-card-subtitle class="text-center"
             ><b>May 15, 2021</b></v-card-subtitle
           > -->
-          <v-card-text class="white padding-0-override">
-            <h6 class="h6-margin-top-0 text-center"><b>May 15, 2021</b></h6>
+          <v-card-text class="white min-height-large">
+            <h5 class="h6-margin-top-0 text-center"><b>May 15, 2021</b></h5>
             <v-timeline align-top dense>
               <v-timeline-item color="#f0cee1" small>
                 <v-row class="pt-1">
@@ -143,13 +143,13 @@
             </v-timeline>
           </v-card-text>
         </v-card>
-        <v-card color="rgb(70, 130, 180)" class="white--text">
+        <v-card elevation="10" color="#ADD8E6" class="white--text">
           <!-- <v-card-title class="justify-center">
             When
           </v-card-title> -->
           <!-- <v-card-subtitle>connor.moynahan@gmail.com</v-card-subtitle> -->
           <v-card-title class="justify-center headline"> Where? </v-card-title>
-          <v-card-text class="white text-center"
+          <v-card-text class="white text-center min-height-small"
             ><h6 class="h6-margin-top-0">
               <b>Virginia Powerboat Association</b>
             </h6>
@@ -170,7 +170,7 @@
     <v-row> -->
       <v-col cols="12" md="6">
         <!-- <v-divider></v-divider> -->
-        <v-card color="rgb(70, 130, 180)" class="white--text margin-below">
+        <v-card elevation="10" color="#ADD8E6" class="white--text margin-below">
           <!-- <v-card-title class="justify-center">
             When
           </v-card-title> -->
@@ -181,10 +181,10 @@
           <!-- <v-card-subtitle class="text-center"
             ></v-card-subtitle
           > -->
-          <v-card-text class="white text-left">
-            <h6 class="h6-margin-top-0 text-center">
+          <v-card-text class="white text-left min-height-large">
+            <h5 class="h6-margin-top-0 text-center">
               <b>Omni Richmond Hotel</b>
-            </h6>
+            </h5>
             We have reserved a block of rooms for out of towners to stay. In
             order to book, you need to call and say you are booking for the
             "Moynahan/Shreckhise" wedding by <b>April 16th</b>
@@ -199,7 +199,7 @@
               </h6></a
             >
             <a
-              href="https://www.google.com/maps/dir/4051+E+Old+Gun+Rd,+Midlothian,+VA+23113/Omni+Richmond+Hotel,+South+12th+Street,+Richmond,+VA/@37.5450632,-77.5902397,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x89b16cf52118b495:0xc6cb60a98721b012!2m2!1d-77.6051725!2d37.5550927!1m5!1m1!1s0x89b111183216207f:0xf62bf4e5b2834d1e!2m2!1d-77.435025!2d37.535771"
+              href="https://www.google.com/maps/dir/Omni+Richmond+Hotel,+South+12th+Street,+Richmond,+VA/4051+E+Old+Gun+Rd,+Midlothian,+VA+23113/@37.5462936,-77.5900675,12z/data=!4m13!4m12!1m5!1m1!1s0x89b111183216207f:0xf62bf4e5b2834d1e!2m2!1d-77.435025!2d37.535771!1m5!1m1!1s0x89b16cf52118b495:0xc6cb60a98721b012!2m2!1d-77.6051725!2d37.5550927"
               target="_blank"
               rel="noopener noreferrer"
               ><h6>Directions to venue (approx 22 mins)</h6></a
@@ -212,7 +212,7 @@
             >
           </v-card-text>
         </v-card>
-        <v-card color="rgb(70, 130, 180)" class="white--text">
+        <v-card elevation="10" color="#ADD8E6" class="white--text">
           <!-- <v-card-title class="justify-center">
             When
           </v-card-title> -->
@@ -223,7 +223,7 @@
           <!-- <v-card-subtitle class="text-center"
             ></v-card-subtitle
           > -->
-          <v-card-text class="white text-left">
+          <v-card-text class="white text-left min-height-small">
             You can find our Amazon Registry -->
             <a
               href="https://www.amazon.com/wedding/julia-shreckhise-connor-moynahan--may-2022/registry/LQJ9SISQU6W6"
@@ -239,7 +239,7 @@
     </v-row>
     <v-row>
       <v-col>
-        <v-card color="rgb(70, 130, 180)" class="white--text">
+        <v-card elevation="10" color="#ADD8E6" class="white--text">
           <!-- <v-card-title class="justify-center">
             When
           </v-card-title> -->
@@ -250,7 +250,7 @@
           <!-- <v-card-subtitle class="text-center"
             ></v-card-subtitle
           > -->
-          <v-card-text class="white text-left">
+          <v-card-text class="white text-left min-height-bottom-box">
             We would like to say that "we'll be fine" by May 15th (but we all
             know how that goes), so we are planning this ceremony to be as
             pandemic proof as possible. The ceremony as well as dinner will be
@@ -317,6 +317,21 @@ h6 {
   margin-right: 10px;
 }
 
+.min-height-small{
+  height: 100px;
+  padding-top:16px !important;
+}
+
+.min-height-bottom-box{
+  height: 100px;
+  padding-top:16px !important;
+}
+
+.min-height-large{
+  height: 300px;
+  padding-top:16px !important;
+}
+
 .otherFlexBox {
   height: 100%;
   padding: 0;
@@ -341,6 +356,7 @@ h6 {
 .padding-0-override {
   /* padding-left: 0px;
   padding-right: 0px; */
+  padding-top: 15px;
 }
 .h6-margin-top-0 {
   margin-top: 0px;

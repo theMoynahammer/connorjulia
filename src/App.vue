@@ -1,9 +1,15 @@
 <template>
-  <v-app>
+  <v-app id="main-app-yo">
     <v-app-bar app color="#f0cee1">
-      <v-toolbar-title
-        >C & J Wedding - 5.15.21</v-toolbar-title
-      >
+          <v-img
+            alt="logo"
+            class="shrink mt-1 logo-class"
+            contain
+            src="/assets/cAndJBetter.png"
+            style="cursor: pointer;"
+            width="90"
+          />
+      <v-toolbar-title class="white--text"><h4>March 15, 2021</h4></v-toolbar-title>
       <!-- <div class="d-flex align-center">
         <router-link to="/resume">
           <v-img
@@ -56,11 +62,7 @@
       <router-view />
       <!-- <HelloWorld/> -->
     </v-content>
-    <v-footer
-    class="justify-center"
-    color="#808080"
-    padless
-    >
+    <v-footer class="justify-center" color="#FFF8DC" padless>
       <!-- <v-card
         flat
         tile
@@ -71,7 +73,7 @@
           {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
         </v-card-text>
       </v-card> -->
-      <h6 class="white--text">🚀🚀🚀🚀🚀: {{timeRemaining}}</h6>
+      <h6>🚀🚀🚀🚀🚀: {{ timeRemaining }}</h6>
     </v-footer>
   </v-app>
 </template>
@@ -127,9 +129,7 @@ export default {
         const now = new Date().getTime();
         const distance = this.dateOfCeremony - now;
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-        );
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
@@ -177,4 +177,9 @@ h6 {
   left: 0;
   overflow-y: scroll;
 }
+
+#main-app-yo{
+    background-image: url('/assets/watercolor.png');
+    background-repeat: repeat;
+  }
 </style>
