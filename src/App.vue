@@ -7,7 +7,7 @@
             contain
             src="/assets/cAndJBetter.png"
             style="cursor: pointer;"
-            width="90"
+            width="85"
           />
       <v-toolbar-title class="white--text"><h4>March 15, 2021</h4></v-toolbar-title>
       <!-- <div class="d-flex align-center">
@@ -62,7 +62,7 @@
       <router-view />
       <!-- <HelloWorld/> -->
     </v-content>
-    <v-footer class="justify-center" color="#FFF8DC" padless>
+    <v-footer class="justify-center footer-at-bottom" color="#FFF8DC" padless>
       <!-- <v-card
         flat
         tile
@@ -182,4 +182,8 @@ h6 {
     background-image: url('/assets/watercolor.png');
     background-repeat: repeat;
   }
+
+.footer-at-bottom{
+margin-top:12px;
+}
 </style>

@@ -1,21 +1,21 @@
 <template>
-  <v-container fill-height>
+  <v-container>
     <!-- <h2>We're Getting Married!</h2> -->
     <!-- <v-row align="center" justify="center">
       <v-col align="center">
         <v-img max-width="500" src="/assets/dopebeachpic.jpg"></v-img>
       </v-col>
     </v-row> -->
-    <v-row class="row-margin-above">
+    <v-row>
       <!-- <v-col sm="6"> -->
-      <v-col>
+      <v-col class="extra-padding-above">
         <!-- <section>
 <h2>WWF History</h2>
 <p>This is a testinthing
   fake fake
 </p>
 </section> -->
-        <v-card class="card-style" shaped elevation="10">
+        <v-card shaped elevation="10">
           <!-- <v-card-title class="justify-center">TESTING THIS</v-card-title> -->
           <v-container>
             <v-row>
@@ -231,8 +231,7 @@
               rel="noopener noreferrer"
               >here</a
             ><br /><br />
-            We will be keeping this website updated as we get closer to the
-            date!!!
+            We will be keeping connorandjulia.com updated as we get closer to the date!
           </v-card-text>
         </v-card>
       </v-col>
@@ -318,13 +317,18 @@ h6 {
 }
 
 .min-height-small{
+  height: 125px;
+  padding-top:16px !important;
+}
+.min-height-bottom-box{
   height: 100px;
   padding-top:16px !important;
 }
 
-.min-height-bottom-box{
-  height: 100px;
-  padding-top:16px !important;
+@media (max-width: 800px) {
+  .min-height-bottom-box {
+    height:230px
+  }
 }
 
 .min-height-large{
@@ -349,20 +353,12 @@ h6 {
 .margin-below {
   margin-bottom: 24px;
 }
-.margin-below-special {
-  margin-bottom: 26px;
-}
 
-.padding-0-override {
-  /* padding-left: 0px;
-  padding-right: 0px; */
-  padding-top: 15px;
-}
 .h6-margin-top-0 {
   margin-top: 0px;
 }
 
-.row-margin-above{
-  margin-top:12px;
+.extra-padding-above{
+margin-top:12px;
 }
 </style>
