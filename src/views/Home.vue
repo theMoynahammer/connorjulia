@@ -15,7 +15,7 @@
   fake fake
 </p>
 </section> -->
-        <v-card shaped elevation="10">
+        <v-card elevation="10">
           <!-- <v-card-title class="justify-center">TESTING THIS</v-card-title> -->
           <v-container>
             <v-row>
@@ -74,9 +74,73 @@
       <v-col><h2 class="text-center headline">Ceremony Details</h2></v-col>
     </v-row> -->
     <v-row>
+      <v-col>
+      <v-card elevation="10" color="#b0bfc5" class="white--text ">
+          <!-- <v-card-title class="justify-center">
+            When
+          </v-card-title> -->
+          <!-- <v-card-subtitle>connor.moynahan@gmail.com</v-card-subtitle> -->
+          <v-card-title class="justify-center headline">
+            Accommodations
+          </v-card-title>
+          <!-- <v-card-subtitle class="text-center"
+            ></v-card-subtitle
+          > -->
+          <v-card-text class="white text-center padding-cards">
+          <v-row style="margin:unset;">
+          <v-col cols="12" md="6">
+            <h5 class="h6-margin-top-0 text-center">
+              <b>Omni Richmond Hotel</b>
+            </h5>
+            Book by <b>April 15th</b>!
+            We have reserved a block of rooms for out of towners to stay. In
+            order to book, call and mention you are booking for the
+            "Moynahan/Shreckhise" wedding.
+            <a href="tel:804-344-7000"><h6>(804) 344-7000</h6></a>
+            <a
+              href="https://www.google.com/maps/place/Omni+Richmond+Hotel/@37.535771,-77.435025,15z/data=!4m2!3m1!1s0x0:0xf62bf4e5b2834d1e?sa=X&ved=2ahUKEwiQkMuGldHuAhVuF1kFHYeVAHIQ_BIwD3oECB0QBQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><h6>
+                100 S 12th St<br />
+                Richmond, VA 23219
+              </h6></a
+            >
+            <a
+              href="https://www.omnihotels.com/hotels/richmond"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><h6>Omni Richmond Website</h6></a
+            >
+            </v-col>
+<v-divider
+  vertical
+  id="vertical-divider"
+></v-divider>
+          <v-col cols="12" md="6">
+            <h5 class="h6-margin-top-0 text-center">
+              <b>Transportation</b>
+            </h5>
+            We've booked <b>one</b> shuttle to pick up from the Omni and drop off guests afterwards.
+            The shuttle will leave the Omni at <b>4:30pm</b>.<br><br>
+            Pickup Location: on Cary Street near 12th Street<br><br>
+            If you wish to drive:
+            <a
+              href="https://www.google.com/maps/dir/Omni+Richmond+Hotel,+South+12th+Street,+Richmond,+VA/4051+E+Old+Gun+Rd,+Midlothian,+VA+23113/@37.5462936,-77.5900675,12z/data=!4m13!4m12!1m5!1m1!1s0x89b111183216207f:0xf62bf4e5b2834d1e!2m2!1d-77.435025!2d37.535771!1m5!1m1!1s0x89b16cf52118b495:0xc6cb60a98721b012!2m2!1d-77.6051725!2d37.5550927"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><h6>Directions to venue (approx 22 mins)</h6></a
+            >
+            </v-col>
+            </v-row>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row>
       <v-col cols="12" md="6">
         <!-- <v-divider></v-divider> -->
-        <v-card elevation="10" color="#ADD8E6" class="white--text margin-below">
+        <v-card elevation="10" color="#b0bfc5" class="white--text margin-below">
           <!-- <v-card-title class="justify-center">
             When
           </v-card-title> -->
@@ -87,9 +151,19 @@
           <!-- <v-card-subtitle class="text-center"
             ><b>May 15, 2021</b></v-card-subtitle
           > -->
-          <v-card-text class="white min-height-large">
+          <v-card-text class="white padding-cards">
             <h5 class="h6-margin-top-0 text-center"><b>May 15, 2021</b></h5>
             <v-timeline align-top dense>
+                          <v-timeline-item color="#f0cee1" small>
+                <v-row class="pt-1">
+                  <v-col sm="4" md="3">
+                    <strong>4:30pm</strong>
+                  </v-col>
+                  <v-col>
+                    <strong>Shuttle departs the Omni</strong>
+                  </v-col>
+                </v-row>
+              </v-timeline-item>
               <v-timeline-item color="#f0cee1" small>
                 <v-row class="pt-1">
                   <v-col sm="4" md="3">
@@ -97,9 +171,6 @@
                   </v-col>
                   <v-col>
                     <strong>Guests arrive</strong>
-                    <!-- <div class="caption">
-                Mobile App
-              </div> -->
                   </v-col>
                 </v-row>
               </v-timeline-item>
@@ -109,7 +180,7 @@
                     <strong>5:30pm</strong>
                   </v-col>
                   <v-col>
-                    <strong>Ceremony Starts</strong>
+                    <strong>Ceremony starts</strong>
                   </v-col>
                 </v-row>
               </v-timeline-item>
@@ -120,7 +191,7 @@
                     <strong>~6pm</strong>
                   </v-col>
                   <v-col>
-                    <strong>Eat Dinner</strong>
+                    <strong>Eat dinner</strong>
                     <!-- <div class="caption">
                 Web App
               </div> -->
@@ -143,13 +214,13 @@
             </v-timeline>
           </v-card-text>
         </v-card>
-        <v-card elevation="10" color="#ADD8E6" class="white--text">
+        <v-card elevation="10" color="#b0bfc5" class="white--text">
           <!-- <v-card-title class="justify-center">
             When
           </v-card-title> -->
           <!-- <v-card-subtitle>connor.moynahan@gmail.com</v-card-subtitle> -->
           <v-card-title class="justify-center headline"> Where? </v-card-title>
-          <v-card-text class="white text-center min-height-small"
+          <v-card-text class="white text-center padding-cards"
             ><h6 class="h6-margin-top-0">
               <b>Virginia Powerboat Association</b>
             </h6>
@@ -162,6 +233,7 @@
                 Midlothian, VA 23113
               </h6></a
             >
+            <b>Ladies</b>: Since it's outdoors, probably best to stick to block heels, flats, etc.
           </v-card-text>
         </v-card>
       </v-col>
@@ -169,76 +241,7 @@
       <!-- </v-row>
     <v-row> -->
       <v-col cols="12" md="6">
-        <!-- <v-divider></v-divider> -->
-        <v-card elevation="10" color="#ADD8E6" class="white--text margin-below">
-          <!-- <v-card-title class="justify-center">
-            When
-          </v-card-title> -->
-          <!-- <v-card-subtitle>connor.moynahan@gmail.com</v-card-subtitle> -->
-          <v-card-title class="justify-center headline">
-            Accommodations
-          </v-card-title>
-          <!-- <v-card-subtitle class="text-center"
-            ></v-card-subtitle
-          > -->
-          <v-card-text class="white text-left min-height-large">
-            <h5 class="h6-margin-top-0 text-center">
-              <b>Omni Richmond Hotel</b>
-            </h5>
-            We have reserved a block of rooms for out of towners to stay. In
-            order to book, you need to call and say you are booking for the
-            "Moynahan/Shreckhise" wedding by <b>April 16th</b>
-            <a href="tel:804-344-7000"><h6>(804) 344-7000</h6></a>
-            <a
-              href="https://www.google.com/maps/place/Omni+Richmond+Hotel/@37.535771,-77.435025,15z/data=!4m2!3m1!1s0x0:0xf62bf4e5b2834d1e?sa=X&ved=2ahUKEwiQkMuGldHuAhVuF1kFHYeVAHIQ_BIwD3oECB0QBQ"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><h6>
-                100 S 12th St<br />
-                Richmond, VA 23219
-              </h6></a
-            >
-            <a
-              href="https://www.google.com/maps/dir/Omni+Richmond+Hotel,+South+12th+Street,+Richmond,+VA/4051+E+Old+Gun+Rd,+Midlothian,+VA+23113/@37.5462936,-77.5900675,12z/data=!4m13!4m12!1m5!1m1!1s0x89b111183216207f:0xf62bf4e5b2834d1e!2m2!1d-77.435025!2d37.535771!1m5!1m1!1s0x89b16cf52118b495:0xc6cb60a98721b012!2m2!1d-77.6051725!2d37.5550927"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><h6>Directions to venue (approx 22 mins)</h6></a
-            >
-            <a
-              href="https://www.omnihotels.com/hotels/richmond"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><h6>Omni Richmond Website</h6></a
-            >
-          </v-card-text>
-        </v-card>
-        <v-card elevation="10" color="#ADD8E6" class="white--text">
-          <!-- <v-card-title class="justify-center">
-            When
-          </v-card-title> -->
-          <!-- <v-card-subtitle>connor.moynahan@gmail.com</v-card-subtitle> -->
-          <v-card-title class="justify-center headline">
-            Miscellaneous
-          </v-card-title>
-          <!-- <v-card-subtitle class="text-center"
-            ></v-card-subtitle
-          > -->
-          <v-card-text class="white text-left min-height-small">
-            You can find our Amazon Registry -->
-            <a
-              href="https://www.amazon.com/wedding/julia-shreckhise-connor-moynahan--may-2022/registry/LQJ9SISQU6W6"
-              target="_blank"
-              rel="noopener noreferrer"
-              >here</a
-            ><br /><br />
-            We will be keeping connorandjulia.com updated as we get closer to the date!
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col>
-        <v-card elevation="10" color="#ADD8E6" class="white--text">
+        <v-card elevation="10" color="#b0bfc5" class="white--text margin-below">
           <!-- <v-card-title class="justify-center">
             When
           </v-card-title> -->
@@ -249,14 +252,43 @@
           <!-- <v-card-subtitle class="text-center"
             ></v-card-subtitle
           > -->
-          <v-card-text class="white text-left min-height-bottom-box">
-            We would like to say that "we'll be fine" by May 15th (but we all
-            know how that goes), so we are planning this ceremony to be as
-            pandemic proof as possible. The ceremony as well as dinner will be
-            outside (under a tent). We're not requiring masks, but we will
-            certainly re-evaluate we we get closer to the date. We want our
-            guests to feel as comfortable as possible, cause we WANT TO SEE YOU
-            ALL!
+          <v-card-text class="white text-left padding-cards">
+            We are planning this ceremony to be as pandemic proof as possible.
+            The ceremony, as well as dinner, will be
+            outside (under a tent). We're not requiring masks, but please make sure
+            to have one as many places in Richmond (and most likely the transportation
+            shuttle) will require one.
+          </v-card-text>
+        </v-card>
+        <!-- <v-divider></v-divider> -->
+        <v-card elevation="10" color="#b0bfc5" class="white--text">
+          <!-- <v-card-title class="justify-center">
+            When
+          </v-card-title> -->
+          <!-- <v-card-subtitle>connor.moynahan@gmail.com</v-card-subtitle> -->
+          <v-card-title class="justify-center headline">
+            Registry
+          </v-card-title>
+          <!-- <v-card-subtitle class="text-center"
+            ></v-card-subtitle
+          > -->
+          <v-card-text class="white text-left padding-cards">
+            You can find our Amazon Registry -->
+            <a
+              href="https://www.amazon.com/wedding/julia-shreckhise-connor-moynahan--may-2022/registry/LQJ9SISQU6W6"
+              target="_blank"
+              rel="noopener noreferrer"
+              >here</a
+            ><br /><br />
+            If you'd like to give a monetary gift to something specific,
+            here are some house projects we have on the horizon:
+            <ul>
+              <li>Replace window shades (only a few left)</li>
+              <li>Replace ancient boiler</li>
+              <li>Kitchen flooring</li>
+              <li>Drain for patio (it floods)</li>
+              <li>Friends for Winston and Rosie. jk ...unless?</li>
+            </ul>
           </v-card-text>
         </v-card>
       </v-col>
@@ -316,9 +348,9 @@ h6 {
   margin-right: 10px;
 }
 
-.min-height-small{
-  height: 125px;
+.padding-cards{
   padding-top:16px !important;
+  padding-bottom:16px !important;
 }
 .min-height-bottom-box{
   height: 100px;
@@ -329,6 +361,9 @@ h6 {
   .min-height-bottom-box {
     height:230px
   }
+  #vertical-divider{
+  display:none;
+}
 }
 
 .min-height-large{

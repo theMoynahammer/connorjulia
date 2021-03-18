@@ -62,7 +62,7 @@
       <router-view />
       <!-- <HelloWorld/> -->
     </v-content>
-    <v-footer class="justify-center footer-at-bottom" color="#FFF8DC" padless>
+    <v-footer class="justify-center footer-at-bottom" color="rgb(240, 206, 225)" padless>
       <!-- <v-card
         flat
         tile
